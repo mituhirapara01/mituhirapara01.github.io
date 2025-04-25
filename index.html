@@ -3,42 +3,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>
-        <script type='text/javascript'>
-      	function initEmbeddedMessaging() {
-      		try {
-      			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+	<script type='text/javascript'>
+  function initEmbeddedMessaging() {
+    try {
+      embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
+ 
 
-	window.addEventListener("onEmbeddedMessagingReady", () => 
-        {
-            console.log("Received the onEmbeddedMessagingReady event…");
-
-            // Send token to Salesforce
-    
-            embeddedservice_bootstrap.userVerificationAPI.setIdentityToken
-            ({
-            identityTokenType : "JWT", 
-
-            //identityToken :"{The JWT token key value that we created in Stage 4}"
-            identityToken : "eyJraWQiOiJtcHVydXNob3R0YW1oaXJhcEBkZWxvaXR0ZS5jb20iLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJ0ZXN0Iiwic3ViIjoiSUhJXzE2MTQwNzYiLCJleHAiOjE3NDI4Mjc0NTYsImlhdCI6MTc0MjgyMTQ1Nn0.hBoisgQTs-6JB2mqKycCF-098bXHqAa9FW9qk1J-5X7VBBgtwL_Y6CjM538idyudofWP9-8zL0L43gPNqGVjgjf3UrePPDe4Diqa3cAq-FCqr8Q5oGAkA3xPGrKkZ9vTE7pjVEM_rol4E4nqpn7Ycig8Z9RcBNuB_pBY-hCf7bUGrnnYSTpXboQ8Tm4YVd_MU_n3XpR_6ztYQPAy8G-ZjZgBj_M0-uXKLxeISQWnLVveukcla4Zw_2GlFkdSTyhXvxVxIxQPUnlm4njr48uZ4xaLU_NUI30yl51xJwiXuBbW9p14JHKMNE94KaYaqzJPezp9Qnsf0szaiets7-R2XQ"
-            });
-        });
-			
-			
-      			embeddedservice_bootstrap.init(
-      				'00DS8000004uZf9',
-      				'Web_Chat_in_localhost',
-      				'https://hselive--dev1.sandbox.my.site.com/ESWWebChatinlocalhost1742545160801',
-      				{
-      					scrt2URL: 'https://hselive--dev1.sandbox.my.salesforce-scrt.com'
-      				}
-      			);
-      		} catch (err) {
-      			console.error('Error loading Embedded Messaging: ', err);
-      		}
-      	};
-      </script>
-      <script type='text/javascript' src='https://hselive--dev1.sandbox.my.site.com/ESWWebChatinlocalhost1742545160801/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+      embeddedservice_bootstrap.init(
+        '00DS8000006BsUg',
+        'HAP_Web_Chat',
+        'https://hselive--qa2.sandbox.my.site.com/ESWHAPWebChat1737346932411',
+        {
+          scrt2URL: 'https://hselive--qa2.sandbox.my.salesforce-scrt.com'
+        }
+      );
+    } catch (err) {
+      console.error('Error loading Embedded Messaging: ', err);
+    }
+  };
+</script>
+<script type='text/javascript' src='https://hselive--qa2.sandbox.my.site.com/ESWHAPWebChat1737346932411/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
     </body>
 <html>

@@ -1,33 +1,24 @@
 <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    </head>
-    <body>
-	<script type='text/javascript'>
-  function initEmbeddedMessaging() {
-    try {
-      embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+	<head></head>
+	<body>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
- 
-
-      embeddedservice_bootstrap.init(
-        '00DS8000006BsUg',
-        'HAP_Web_Chat',
-        'https://hselive--qa2.sandbox.my.site.com/ESWHAPWebChat1737346932411',
-        {
-          scrt2URL: 'https://hselive--qa2.sandbox.my.salesforce-scrt.com'
-        }
-      );
-    } catch (err) {
-      console.error('Error loading Embedded Messaging: ', err);
-    }
-  };
+			embeddedservice_bootstrap.init(
+				'00DS8000004uIkk',
+				'HAP_Web_Chat',
+				'https://hselive--preprod.sandbox.my.site.com/ESWHAPWebChat1749190300357',
+				{
+					scrt2URL: 'https://hselive--preprod.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
-<script type='text/javascript' src='https://hselive--qa2.sandbox.my.site.com/ESWHAPWebChat1737346932411/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-    
-    
-    <div>
-	    <p>hello world</p>
-    </div>
-    </body>
-<html>
+<script type='text/javascript' src='https://hselive--preprod.sandbox.my.site.com/ESWHAPWebChat1749190300357/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	</body>
+</html>
